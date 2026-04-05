@@ -1,0 +1,66 @@
+/* ================================================
+    Establecer eliminación de imágenes de fondo y sombras
+   ================================================= */
+* {
+    background-image: none;
+    box-shadow: none;
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+}
+
+/* ================================================
+    Estilo general de la ventana (Transparencia Tokyo)
+   ================================================= */
+window {
+    /* Degradado sutil usando tu fondo #1a1b26 y el azul #7aa2f7 */
+    background: radial-gradient(circle, rgba(26, 27, 38, 0.9) 0%, rgba(34, 35, 48, 0.7) 100%);
+    border-radius: 15px;
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ================================================
+    Estilo de los botones (Consistente con Waybar)
+   ================================================= */
+button {
+    margin: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 18px;      /* Match con tus módulos de red/reloj */
+    border-color: #7aa2f7;    /* Azul de tus botones persistentes */
+    color: #f1f1f1;           /* Blanco de tu pulseaudio */
+    background-color: #222330; /* Fondo de tus módulos de Waybar */
+    border-style: solid;
+    border-width: 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20%;      /* Iconos un poco más discretos */
+    padding: 10px;
+    transition: all 0.3s cubic-bezier(.55,0.0,.28,1.5); /* Animación más elástica */
+}
+
+/* ================================================
+    Hover: El cambio al naranja activo de tus workspaces
+   ================================================= */
+button:focus,
+button:active,
+button:hover {
+    background-color: #7aa2f7; /* Fondo se vuelve azul */
+    color: #1a1b26;            /* Texto oscuro para contraste */
+    border-color: #e0af68;     /* Borde naranja activo */
+    outline-style: none;
+    background-size: 30%;      /* Efecto de aumento sutil del icono */
+}
+
+/* ================================================
+    Iconos (Manteniendo tus rutas)
+   ================================================= */
+#lock { background-image: url("/usr/share/wlogout/icons/lock.png"); }
+#logout { background-image: url("/usr/share/wlogout/icons/logout.png"); }
+#suspend { background-image: url("/usr/share/wlogout/icons/suspend.png"); }
+#hibernate { background-image: url("/usr/share/wlogout/icons/hibernate.png"); }
+#shutdown { background-image: url("/usr/share/wlogout/icons/shutdown.png"); }
+#reboot { background-image: url("/usr/share/wlogout/icons/reboot.png"); }

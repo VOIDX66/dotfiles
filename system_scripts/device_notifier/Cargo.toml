@@ -1,0 +1,9 @@
+[package]
+name = "device_notifier"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+libc = "0.2.184"
+notify-rust = "4.13.1"
+udev = "0.9.3"

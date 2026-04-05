@@ -1,0 +1,52 @@
+[global]
+    # --- Geometría y Posición ---
+    width = 300
+    height = (0, 300)
+    origin = top-right
+    offset = (10, 50)
+    corner_radius = 15          # Igual al border-radius de tu waybar window
+    frame_width = 2             # Un poco más definido
+    gap_size = 8
+    
+    # --- Espaciado y Texto ---
+    padding = 12
+    horizontal_padding = 15
+    font = JetBrainsMono Nerd Font 10
+    
+    # Formato: Título en el color de tus workspaces activos (naranja)
+    format = "<span foreground='#e0af68'><b>%s</b></span>\n%b"
+    
+    # --- Colores de la Interfaz ---
+    # Usando el fondo principal de tu Waybar
+    frame_color = "#7aa2f7"     # El azul de tus persistent buttons para el borde
+    separator_color = frame
+    
+    # Barra de progreso (estilo batería/cpu)
+    progress_bar = true
+    progress_bar_height = 8
+    progress_bar_frame_width = 1
+    progress_bar_corner_radius = 10
+    
+    icon_position = left
+    min_icon_size = 32
+    max_icon_size = 64
+
+[urgency_low]
+    # Usando el color de los workspaces vacíos para el texto tenue
+    background = "#1a1b26"
+    foreground = "#583794"
+    timeout = 5
+
+[urgency_normal]
+    # Fondo base de tu barra y texto principal blanco/gris de pulseaudio
+    background = "#1a1b26"
+    foreground = "#f1f1f1"
+    frame_color = "#7aa2f7"
+    timeout = 10
+
+[urgency_critical]
+    # Fondo base pero con borde resaltado y texto de alerta
+    background = "#1a1b26"
+    foreground = "#f38ba8" 
+    frame_color = "#e0af68"     # Naranja activo para llamar la atención
+    timeout = 0

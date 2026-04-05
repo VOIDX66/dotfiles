@@ -1,0 +1,13 @@
+
+//@theme "/usr/share/rofi/themes/arthur.rasi"
+
+//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+
+@theme "/home/void/.local/share/rofi/themes/rounded-nord-dark.rasi"
+
+configuration {
+    show-icons: true;
+    drun-display-format: "{icon} {name}";
+    icon-theme: "Papirus-Dark";   // puedes usar otro tema de iconos
+}
+

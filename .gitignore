@@ -1,0 +1,19 @@
+# 1. Bloquear todo por defecto
+/*
+
+# 2. Permitir el propio ignore
+!.gitignore
+
+# 3. Whitelist: Solo carpetas de configuración esenciales
+!hypr/
+!waybar/
+!kitty/
+!rofi/
+!dunst/
+!wlogout/
+
+# 4. Whitelist: Scripts y herramientas propias
+!system_scripts/
+
+# 5. Si tienes archivos específicos en la raíz de .config
+!fastfetch/
