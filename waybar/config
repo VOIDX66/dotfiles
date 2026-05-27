@@ -19,13 +19,13 @@
 		"scroll-step": 5,
 		"format": "{icon} {volume}%",
 		"format-muted": "<span>  </span>{volume}%",
-		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle && wpctl set-mute $(wpctl status | grep -i 'HDMI' | grep -iE 'output|sink' | grep -oE '[0-9]+\\.' | head -n 1 | tr -d '.') toggle 2>/dev/null || true",
 		"format-icons": {
 			"default": [
-                "<span color='#7aa2f7'> </span>", 
-                "<span color='#7aa2f7'> </span>", 
-                "<span color='#7aa2f7'> </span>"
-            ]
+                		"<span color='#7aa2f7'> </span>", 
+                		"<span color='#7aa2f7'> </span>", 
+                		"<span color='#7aa2f7'> </span>"
+            		]
 		}
 	},
     "hyprland/workspaces": {
